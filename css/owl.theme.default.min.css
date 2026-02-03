@@ -1,0 +1,367 @@
+/* ============================================
+   ENHANCED OWL CAROUSEL STYLES
+   Modern, Light, Premium Design
+   ============================================ */
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-theme .owl-dots,
+.owl-theme .owl-nav {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+/* === NAVIGATION ARROWS === */
+.owl-theme .owl-nav {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+  transition: all var(--transition-normal);
+  pointer-events: all;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.owl-carousel:hover .owl-nav [class*=owl-] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.owl-theme .owl-nav .owl-prev {
+  transform: translateX(-50%);
+  margin-left: var(--space-md);
+}
+
+.owl-theme .owl-nav .owl-next {
+  transform: translateX(50%);
+  margin-right: var(--space-md);
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+  color: var(--white);
+  border-color: transparent;
+  transform: translateX(0) scale(1.1);
+  box-shadow: var(--shadow-lg), 0 8px 20px -4px rgba(59, 130, 246, 0.3);
+}
+
+.owl-theme .owl-nav .disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateX(0) !important;
+}
+
+.owl-theme .owl-nav .disabled:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+/* === DOTS/PAGINATION === */
+.owl-theme .owl-dots {
+  margin-top: var(--space-xl);
+  position: relative;
+  z-index: 5;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  margin: 0 var(--space-xs);
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 12px;
+  height: 12px;
+  margin: var(--space-xs);
+  background: var(--border-color);
+  display: block;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  transition: all var(--transition-normal);
+  border-radius: var(--radius-full);
+  transform: scale(1);
+  position: relative;
+  overflow: hidden;
+}
+
+.owl-theme .owl-dots .owl-dot span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+  border-radius: inherit;
+  transform: scale(0);
+  transition: transform var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: transparent;
+  transform: scale(1.2);
+}
+
+.owl-theme .owl-dots .owl-dot.active span::before,
+.owl-theme .owl-dots .owl-dot:hover span::before {
+  transform: scale(1);
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* === CAROUSEL ITEM ENHANCEMENTS === */
+.owl-carousel .owl-item {
+  padding: var(--space-xs);
+  transition: transform var(--transition-normal);
+}
+
+.owl-carousel .owl-item:not(.center) {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.owl-carousel .owl-item.center {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.owl-carousel .owl-item img {
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.owl-carousel .owl-item:hover img {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* === ANIMATIONS === */
+.owl-carousel .animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 991.98px) {
+  .owl-theme .owl-nav [class*=owl-] {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .owl-theme .owl-nav .owl-prev {
+    margin-left: var(--space-sm);
+  }
+  
+  .owl-theme .owl-nav .owl-next {
+    margin-right: var(--space-sm);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .owl-theme .owl-nav {
+    display: none; /* Hide arrows on mobile for better touch experience */
+  }
+  
+  .owl-theme .owl-dots {
+    margin-top: var(--space-lg);
+  }
+  
+  .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .owl-carousel .owl-item:not(.center) {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .owl-carousel .owl-item {
+    padding: var(--space-xs) 0;
+  }
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+  .owl-theme .owl-nav [class*=owl-] {
+    background: var(--gray-700);
+    color: var(--gray-100);
+    border-color: var(--gray-600);
+  }
+  
+  .owl-theme .owl-nav [class*=owl-]:hover {
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    color: var(--white);
+  }
+  
+  .owl-theme .owl-dots .owl-dot span {
+    background: var(--gray-600);
+  }
+  
+  .owl-carousel .owl-item img {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* === TOUCH DEVICE OPTIMIZATIONS === */
+@media (hover: none) and (pointer: coarse) {
+  .owl-theme .owl-nav [class*=owl-] {
+    opacity: 1;
+    visibility: visible;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .owl-theme .owl-nav .owl-prev {
+    transform: translateX(0);
+    margin-left: var(--space-sm);
+  }
+  
+  .owl-theme .owl-nav .owl-next {
+    transform: translateX(0);
+    margin-right: var(--space-sm);
+  }
+  
+  .owl-carousel .owl-item:not(.center) {
+    opacity: 0.8;
+  }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+.owl-theme .owl-nav [class*=owl-]:focus {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.owl-theme .owl-dots .owl-dot:focus span {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* === CUSTOM ANIMATIONS === */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+.owl-carousel .owl-item.animate-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.owl-carousel .owl-item.animate-out {
+  animation: slideOut 0.5s ease-out;
+}
+
+/* === LOADING STATE === */
+.owl-carousel.loading .owl-stage-outer {
+  position: relative;
+}
+
+.owl-carousel.loading .owl-stage-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-xl);
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* === PROGRESS INDICATOR (OPTIONAL) === */
+.owl-progress {
+  height: 4px;
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.owl-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+  border-radius: var(--radius-full);
+  width: 0%;
+  transition: width 0.3s ease;
+}

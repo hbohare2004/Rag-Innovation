@@ -1,0 +1,445 @@
+/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/02/2020 23:01
+  	Enhanced with modern styling
+*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+/* Enhanced base styling with modern CSS */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+  
+  /* Modern enhancements */
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+}
+
+/* Individual icon styling with modern effects */
+.flaticon-car-service:before { 
+  content: "\f100"; 
+  color: #4361ee;
+  text-shadow: 0 2px 4px rgba(67, 97, 238, 0.2);
+}
+
+.flaticon-battery:before { 
+  content: "\f101"; 
+  color: #4cc9f0;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+.flaticon-tyre:before { 
+  content: "\f102"; 
+  color: #f94144;
+  transition: transform 0.6s ease;
+}
+
+.flaticon-tow-truck:before { 
+  content: "\f103"; 
+  color: #f8961e;
+  animation: gentle-move 4s ease-in-out infinite;
+}
+
+.flaticon-car-engine:before { 
+  content: "\f104"; 
+  color: #7209b7;
+  filter: drop-shadow(0 2px 3px rgba(114, 9, 183, 0.2));
+}
+
+.flaticon-repair:before { 
+  content: "\f105"; 
+  color: #38b000;
+  animation: gear-rotate 10s linear infinite;
+}
+
+/* Hover effects for all icons */
+[class^="flaticon-"]:hover:before, 
+[class*=" flaticon-"]:hover:before,
+[class^="flaticon-"]:hover:after, 
+[class*=" flaticon-"]:hover:after {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Specific hover effects */
+.flaticon-car-service:hover:before {
+  color: #3a56d4;
+  text-shadow: 0 4px 8px rgba(58, 86, 212, 0.3);
+}
+
+.flaticon-battery:hover:before {
+  animation: charge-pulse 0.8s ease-in-out;
+  color: #38b2ac;
+}
+
+.flaticon-tyre:hover:before {
+  transform: rotate(90deg);
+  color: #dc2626;
+}
+
+.flaticon-tow-truck:hover:before {
+  animation-play-state: paused;
+  color: #ea580c;
+}
+
+.flaticon-car-engine:hover:before {
+  color: #9333ea;
+  filter: drop-shadow(0 4px 6px rgba(147, 51, 234, 0.3));
+}
+
+.flaticon-repair:hover:before {
+  animation: gear-spin-fast 1s linear infinite;
+  color: #22c55e;
+}
+
+/* Size variations that work with existing structure */
+.flaticon-lg:before,
+.flaticon-lg:after {
+  font-size: 28px !important;
+}
+
+.flaticon-xl:before,
+.flaticon-xl:after {
+  font-size: 36px !important;
+}
+
+.flaticon-xxl:before,
+.flaticon-xxl:after {
+  font-size: 48px !important;
+}
+
+/* Color variations */
+.flaticon-primary:before,
+.flaticon-primary:after {
+  color: #4361ee !important;
+}
+
+.flaticon-secondary:before,
+.flaticon-secondary:after {
+  color: #7209b7 !important;
+}
+
+.flaticon-accent:before,
+.flaticon-accent:after {
+  color: #f72585 !important;
+}
+
+/* Background circle effect */
+.flaticon-circle:before,
+.flaticon-circle:after {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.5em !important;
+  height: 2.5em !important;
+  background: linear-gradient(135deg, #4361ee, #3a56d4) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  margin-left: 0 !important;
+  margin-right: 10px !important;
+  box-shadow: 0 4px 6px rgba(67, 97, 238, 0.2) !important;
+}
+
+.flaticon-circle-accent:before,
+.flaticon-circle-accent:after {
+  background: linear-gradient(135deg, #f72585, #b5179e) !important;
+}
+
+/* Animation keyframes */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes charge-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gentle-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes gear-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gear-spin-fast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .flaticon-car-service:before { 
+    color: #60a5fa;
+  }
+  
+  .flaticon-battery:before { 
+    color: #22d3ee;
+  }
+  
+  .flaticon-tyre:before { 
+    color: #f87171;
+  }
+  
+  .flaticon-tow-truck:before { 
+    color: #fb923c;
+  }
+  
+  .flaticon-car-engine:before { 
+    color: #a855f7;
+  }
+  
+  .flaticon-repair:before { 
+    color: #4ade80;
+  }
+  
+  .flaticon-circle:before,
+  .flaticon-circle:after {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  
+  .flaticon-lg:before,
+  .flaticon-lg:after {
+    font-size: 24px !important;
+  }
+  
+  .flaticon-xl:before,
+  .flaticon-xl:after {
+    font-size: 30px !important;
+  }
+  
+  .flaticon-xxl:before,
+  .flaticon-xxl:after {
+    font-size: 36px !important;
+  }
+  
+  .flaticon-circle:before,
+  .flaticon-circle:after {
+    width: 2.2em !important;
+    height: 2.2em !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    color: #000000 !important;
+    text-shadow: none !important;
+    animation: none !important;
+    filter: none !important;
+  }
+  
+  .flaticon-circle:before,
+  .flaticon-circle:after {
+    background: none !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+[class^="flaticon-"]:focus:before, 
+[class*=" flaticon-"]:focus:before,
+[class^="flaticon-"]:focus:after, 
+[class*=" flaticon-"]:focus:after {
+  outline: 2px solid #4361ee;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Glow effect */
+.flaticon-glow:before,
+.flaticon-glow:after {
+  filter: drop-shadow(0 0 3px currentColor);
+}
+
+/* 3D effect */
+.flaticon-3d:before,
+.flaticon-3d:after {
+  text-shadow: 
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2);
+}
+
+/* Bordered effect */
+.flaticon-bordered:before,
+.flaticon-bordered:after {
+  padding: 8px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffffff10, #00000010);
+  margin-left: 10px !important;
+}
+
+/* Gradient text effect */
+.flaticon-gradient:before,
+.flaticon-gradient:after {
+  background: linear-gradient(135deg, #4361ee, #f72585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Stacked effect */
+.flaticon-stacked {
+  position: relative;
+}
+
+.flaticon-stacked:before,
+.flaticon-stacked:after {
+  position: relative;
+  z-index: 2;
+}
+
+.flaticon-stacked:before:after,
+.flaticon-stacked:after:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.2em;
+  height: 2.2em;
+  background: linear-gradient(135deg, #4361ee20, #3a56d420);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Loading state */
+.flaticon-loading:before,
+.flaticon-loading:after {
+  animation: loading-spin 1s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes loading-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Performance optimization */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  will-change: transform, opacity, filter;
+}
+
+/* Disabled state */
+.flaticon-disabled:before,
+.flaticon-disabled:after {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  animation: none !important;
+}
+
+/* Highlight effect for active state */
+:target [class^="flaticon-"]:before,
+:target [class*=" flaticon-"]:before,
+:target [class^="flaticon-"]:after,
+:target [class*=" flaticon-"]:after {
+  animation: highlight-bounce 0.6s ease;
+}
+
+@keyframes highlight-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+}
