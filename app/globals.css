@@ -77,12 +77,23 @@
   }
 
   .kicker {
-    @apply text-cta font-semibold text-sm uppercase tracking-widest mb-3;
+    @apply text-primary font-semibold text-sm uppercase tracking-widest mb-3;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(156, 28, 43, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 15px 4px rgba(156, 28, 43, 0.3);
+    transform: scale(1.03);
   }
 }

@@ -100,7 +100,7 @@ export default function PricingPage() {
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cta text-white text-xs font-semibold px-4 py-1 rounded-full flex items-center gap-1">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-full flex items-center gap-1">
                       <Star size={12} /> Most Popular
                     </div>
                   )}
@@ -125,7 +125,7 @@ export default function PricingPage() {
                       >
                         <Check
                           size={16}
-                          className="text-cta shrink-0 mt-0.5"
+                          className="text-primary shrink-0 mt-0.5"
                         />
                         {f}
                       </li>
@@ -134,7 +134,7 @@ export default function PricingPage() {
                   <Link
                     href="/contact"
                     className={
-                      plan.popular ? "btn-cta w-full text-center" : "btn-outline w-full text-center"
+                      plan.popular ? "btn-primary w-full text-center" : "btn-outline w-full text-center"
                     }
                   >
                     Get Started

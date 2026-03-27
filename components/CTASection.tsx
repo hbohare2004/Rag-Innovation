@@ -39,7 +39,7 @@ export default function CTASection({
           {description}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <Link href={primaryLink.href} className="btn-cta">
+          <Link href={primaryLink.href} className="inline-flex items-center justify-center px-7 py-3 rounded-full border-2 border-white/30 text-white font-semibold text-sm transition-all duration-300 hover:bg-white/10 hover:border-white/50">
             {primaryLink.label}
           </Link>
           {secondaryLink && (

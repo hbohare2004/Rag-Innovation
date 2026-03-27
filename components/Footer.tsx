@@ -72,7 +72,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-cta hover:text-white transition-all duration-300"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   <s.icon size={16} />
                 </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-cta transition-colors group"
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-primary transition-colors group"
                   >
                     <ArrowRight
                       size={14}
@@ -112,32 +112,32 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
-                <Phone size={16} className="text-cta shrink-0 mt-0.5" />
+                <Phone size={16} className="text-primary shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+919425128596" className="hover:text-cta transition-colors">
+                  <a href="tel:+919425128596" className="hover:text-primary transition-colors">
                     +91 9425128596
                   </a>
                   <br />
-                  <a href="tel:+918982321930" className="hover:text-cta transition-colors">
+                  <a href="tel:+918982321930" className="hover:text-primary transition-colors">
                     +91 8982321930
                   </a>
                   <br />
-                  <a href="tel:+918839468492" className="hover:text-cta transition-colors">
+                  <a href="tel:+918839468492" className="hover:text-primary transition-colors">
                     +91 8839468492
                   </a>
                 </div>
               </li>
               <li className="flex gap-3">
-                <Mail size={16} className="text-cta shrink-0 mt-0.5" />
+                <Mail size={16} className="text-primary shrink-0 mt-0.5" />
                 <a
                   href="mailto:raginnovations@gmail.com"
-                  className="hover:text-cta transition-colors"
+                  className="hover:text-primary transition-colors"
                 >
                   raginnovations@gmail.com
                 </a>
               </li>
               <li className="flex gap-3">
-                <MapPin size={16} className="text-cta shrink-0 mt-0.5" />
+                <MapPin size={16} className="text-primary shrink-0 mt-0.5" />
                 <span className="text-gray-400">
                   B-Nest, Zone 14, Govindpura, Bhopal 462022, M.P.
                 </span>
@@ -152,7 +152,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex gap-3">
-                <Clock size={16} className="text-cta shrink-0 mt-0.5" />
+                <Clock size={16} className="text-primary shrink-0 mt-0.5" />
                 <div>
                   <p>Mon – Fri: 9 am – 8 pm</p>
                   <p>Saturday: 9 am – 5 pm</p>
@@ -169,7 +169,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <p>&copy; {new Date().getFullYear()} Rag Innovations. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/contact" className="hover:text-cta transition-colors">
+            <Link href="/contact" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>
             <Link href="/contact" className="hover:text-cta transition-colors">

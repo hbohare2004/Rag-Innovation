@@ -24,7 +24,7 @@ export default function ImpactStats() {
       <div className="container-main relative">
         <FadeIn>
           <div className="text-center mb-14">
-            <p className="text-cta font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
               Our Impact
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-balance">
@@ -37,8 +37,8 @@ export default function ImpactStats() {
           {stats.map((stat, i) => (
             <FadeIn key={stat.label} delay={i * 0.15}>
               <div className="text-center group">
-                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-cta/20 transition-colors duration-300">
-                  <stat.icon size={28} className="text-cta" />
+                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                  <stat.icon size={28} className="text-primary" />
                 </div>
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   <AnimatedCounter target={stat.target} suffix={stat.suffix} />

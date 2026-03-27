@@ -172,7 +172,7 @@ export default function ContactRequestForm() {
       <button
         type="submit"
         disabled={status === "opening"}
-        className="btn-cta w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
+        className="btn-cta bg-primary w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
       >
         {status === "opening" ? "Opening Email & WhatsApp..." : "Send Message →"}
       </button>

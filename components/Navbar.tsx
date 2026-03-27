@@ -13,8 +13,9 @@ const navLinks = [
   { href: "/products", label: "Products" },
   { href: "/gallery", label: "Gallery" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/school-mhm-compliance-solutions", label: "MHM Compliance" },
   { href: "/contact", label: "Contact" },
-];
+] as const;
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,32 +40,47 @@ export default function Navbar() {
         }`}
     >
       <nav className="container-main flex items-center justify-between h-16 md:h-20">
-        <Image
-          src="/images/logo.png"
-          alt="Rag Innovations"
-          width={200}
-          height={58}
-          className="h-12 md:h-14 w-auto"
-          priority
-        />
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            alt="Rag Innovations"
+            width={200}
+            height={58}
+            className="h-12 md:h-14 w-auto cursor-pointer"
+            priority
+          />
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:text-primary ${pathname === link.href
-                  ? "text-primary"
-                  : "text-navy"
+          {navLinks.map((link) => {
+            const isMhmCompliance =
+              link.href === "/school-mhm-compliance-solutions";
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-sm font-medium transition-all duration-300 ${
+                  isMhmCompliance
+                    ? `px-3.5 py-2 rounded-lg border ${
+                        isActive
+                          ? "text-primary bg-primary/10 border-primary/40"
+                          : "text-navy border-primary/20 hover:text-primary hover:bg-primary/5"
+                      }`
+                    : `px-3 py-2 rounded-lg hover:text-primary ${
+                        isActive ? "text-primary" : "text-navy"
+                      }`
                 }`}
-            >
-              {link.label}
-              {pathname === link.href && (
-                <span className="absolute bottom-0.5 left-3 right-3 h-0.5 bg-primary rounded-full" />
-              )}
-            </Link>
-          ))}
+              >
+                {link.label}
+                {isActive && !isMhmCompliance && (
+                  <span className="absolute bottom-0.5 left-3 right-3 h-0.5 bg-primary rounded-full" />
+                )}
+              </Link>
+            );
+          })}
           <Link href="/contact" className="btn-cta ml-3 text-xs px-5 py-2.5 bg-primary text-white #9C1C2B">
             Talk to Our Team
           </Link>
@@ -86,18 +102,33 @@ export default function Navbar() {
           }`}
       >
         <div className="container-main pb-6 pt-2 space-y-1 bg-white border-t border-gray-100">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${pathname === link.href
-                  ? "text-primary bg-primary/5"
-                  : "text-navy hover:text-primary hover:bg-gray-50"
+          {navLinks.map((link) => {
+            const isMhmCompliance =
+              link.href === "/school-mhm-compliance-solutions";
+            const isActive = pathname === link.href;
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+                  isMhmCompliance
+                    ? `${
+                        isActive
+                          ? "text-primary bg-primary/10 border-primary/40"
+                          : "text-navy border-primary/25 hover:text-primary hover:bg-primary/5"
+                      } rounded-lg border`
+                    : `rounded-lg ${
+                        isActive
+                          ? "text-primary bg-primary/5"
+                          : "text-navy hover:text-primary hover:bg-gray-50"
+                      }`
                 }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <div className="pt-3 px-4">
             <Link href="/contact" className="btn-cta w-full text-center text-xs">
               Talk to Our Team

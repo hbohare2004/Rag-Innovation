@@ -8,14 +8,15 @@ import { ChevronLeft, ChevronRight, BadgeCheck, Award, Globe, GraduationCap } fr
 
 const slides = [
   {
-    src: "/images/bg_5.png",
-    alt: "Low-cost sanitary napkin making machine by Rag Innovations",
-    title: "Creating Impact From Local To Global",
+    src: "/images/bg_3.jpeg",
+    alt: "Vocational training for sanitary pad production",
+    title: "Building Self-Reliant Menstrual Hygiene Enterprises",
   },
+  
   {
     src: "/images/bg_1.png",
     alt: "Sanitary pad manufacturing unit in rural India",
-    title: "Innovating Affordable Hygiene Technologies",
+    title: "Innovating Affordable Menstrual Hygiene Technologies",
   },
   {
     src: "/images/bg_12.png",
@@ -28,10 +29,16 @@ const slides = [
     title: "From Awareness to Action",
   },
   {
-    src: "/images/bg_3.jpeg",
-    alt: "Vocational training for sanitary pad production",
-    title: "Building Self-Reliant Hygiene Enterprises",
+    src: "/images/bg_13.jpeg",
+    alt: "Supporting School MHM Compliance Across India",
+    title: "Supporting School MHM Compliance Across India",
   },
+  {
+    src: "/images/bg_5.png",
+    alt: "Low-cost sanitary napkin making machine by Rag Innovations",
+    title: "Creating Impact From Local To Global",
+  },
+  
 ];
 
 const badges = [

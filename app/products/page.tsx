@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 const products = [
   {
-    image: "/images/prod-3.jpg",
+    image: "/images/bg_6.png",
     title: "Automatic Sanitary Napkin Machine",
     description:
       "High-speed fully automatic sanitary napkin manufacturing machine for large-scale production facilities.",
   },
   {
-    image: "/images/prod-1.jpeg",
+    image: "/images/prod-1.png",
     title: "Ultra Thin Semi-Automatic Sanitary Pad Machine",
     description:
       "Our flagship low-cost machine producing ultra-thin pads with wings, ideal for community-level enterprises.",
@@ -37,19 +37,19 @@ const products = [
       "Our most affordable sanitary pad making machine — perfect for startups, SHGs, and rural community centres.",
   },
   {
-    image: "/images/prod-5.png",
+    image: "/images/prod-5.jpeg",
     title: "Solar Based Sanitary Napkin Machine",
     description:
       "Solar-powered sanitary napkin machine for off-grid and remote areas with limited electricity access.",
   },
   {
-    image: "/images/prod-10.png",
+    image: "/images/prod-10.jpg",
     title: "Sanitary Pad Manufacturer Unit",
     description:
       "Complete manufacturing unit setup with machine, raw materials, and training for immediate production.",
   },
   {
-    image: "/images/prod-6.jpg",
+    image: "/images/prod-6.png",
     title: "Sanitary Napkin Vending Machine",
     description:
       "Coin and card-operated vending machines for schools, offices, and public spaces ensuring pad accessibility.",
@@ -61,7 +61,7 @@ const products = [
       "Safe, hygienic, and eco-friendly incinerator for responsible disposal of used sanitary products.",
   },
   {
-    image: "/images/prod-8.png",
+    image: "/images/prod-8.jpeg",
     title: "Sanitary Napkin Raw Material Supplier",
     description:
       "Premium raw materials — top sheets, absorbent cores, backing, and packaging for consistent pad quality.",

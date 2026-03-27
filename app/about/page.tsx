@@ -83,10 +83,10 @@ export default function AboutPage() {
             {values.map((v, i) => (
               <FadeIn key={v.title} delay={i * 0.15}>
                 <div
-                  className={`bg-white rounded-2xl p-8 border-t-4 ${v.accent} shadow-sm card-hover h-full`}
+                  className={`bg-white rounded-2xl p-8 border-t-4 ${v.accent} shadow-sm card-hover h-full `}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                    <v.icon size={24} className="text-primary" />
+                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-5">
+                    <v.icon size={24} className="text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-navy mb-3">
                     {v.title}
@@ -148,8 +148,8 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   {machineFeatures.map((f) => (
                     <div key={f.text} className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-cta/10 flex items-center justify-center shrink-0">
-                        <f.icon size={20} className="text-cta" />
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                        <f.icon size={20} className="text-primary" />
                       </div>
                       <span className="text-gray-700">{f.text}</span>
                     </div>

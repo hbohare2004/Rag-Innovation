@@ -17,8 +17,8 @@ const services = [
     title: "Premium Raw Materials",
     description:
       "High-quality raw materials for ultra-thin pads with wings. Consistent supply chain ensuring your production never stops, with competitive pricing for bulk orders.",
-    color: "bg-cta/10",
-    iconColor: "text-cta",
+    color: "bg-primary/10",
+    iconColor: "text-primary",
   },
   {
     icon: GraduationCap,

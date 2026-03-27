@@ -32,7 +32,7 @@ const services = [
   },
   {
     icon: Package,
-    title: "Premium Raw Materials",
+    title: "Sanitary Napkin Making Raw Materials",
     description:
       "Reliable supply of high-quality raw materials to keep your production running smoothly. We source the best materials for ultra-thin pads with wings, ensuring consistent quality and competitive pricing for all order sizes.",
     features: [
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                         key={f}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-cta shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                         {f}
                       </li>
                     ))}
