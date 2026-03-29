@@ -52,12 +52,20 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/images/logo.png"
-                alt="Rag Innovations"
-                width={140}
-                height={40}
-                className="h-10 w-auto brightness-200"
+              <div 
+                className="h-14 w-40 bg-primary"
+                style={{
+                  WebkitMaskImage: 'url(/images/logo.png)',
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'left center',
+                  maskImage: 'url(/images/logo.png)',
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'left center',
+                }}
+                aria-label="Rag Innovations Logo"
+                role="img"
               />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400 mb-6">

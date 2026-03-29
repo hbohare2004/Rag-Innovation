@@ -19,9 +19,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "School MHM Compliance Solutions",
+  title: "School MHM Compliance Solutions | Sanitary Pad Machine India | Rag Innovations",
   description:
-    "Official implementation support for school-level menstrual hygiene management compliance across India, including infrastructure, awareness, disposal, and documentation support.",
+    "Rag Innovations provides menstrual hygiene awareness solutions in India with an affordable sanitary pad machine, school compliance systems, and sanitary napkin manufacturing units.",
 };
 
 const requirements = [
@@ -102,6 +102,26 @@ const faqs = [
     answer:
       "Sessions are typically organised for students, key teaching staff, and relevant support teams to ensure consistent institutional understanding.",
   },
+  {
+    question: "What is menstrual hygiene awareness in India?",
+    answer:
+      "Menstrual hygiene awareness in India is a critical movement aimed at breaking taboos, educating communities, and ensuring that every girl and woman has access to safe sanitary products and proper disposal methods.",
+  },
+  {
+    question: "What is a sanitary pad making machine?",
+    answer:
+      "A sanitary pad making machine is specialized equipment designed to produce high-quality sanitary napkins locally. We offer both semi-automatic and fully automatic options, ensuring schools and communities can maintain an uninterrupted supply.",
+  },
+  {
+    question: "How can schools set up a sanitary napkin manufacturing unit?",
+    answer:
+      "Schools can partner with organizations like Rag Innovations to establish a sanitary napkin manufacturing unit on campus. We handle the assessment, machine installation, material supply chain, and training for the staff or local women operating it.",
+  },
+  {
+    question: "Are low cost sanitary napkin machines available in India?",
+    answer:
+      "Yes, we provide the best low cost sanitary napkin machine options that are highly efficient and easy to operate. These are ideal for schools, NGOs, and rural programs focused on affordable menstrual hygiene management.",
+  },
 ];
 
 export default function SchoolMhmComplianceSolutionsPage() {
@@ -110,10 +130,10 @@ export default function SchoolMhmComplianceSolutionsPage() {
       <PageHero
         kicker="MHM Compliance Support"
         title="Supporting School MHM Compliance Across India"
-        subtitle="Experience of working with schools under Navodaya Vidyalaya Samiti "
+        subtitle="Delivering menstrual hygiene awareness in India with an affordable sanitary pad machine and school-ready compliance solutions."
       />
 
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="container-main">
           <FadeIn>
             <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
@@ -132,7 +152,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
             </div>
           </FadeIn>
         </div>
-      </section>
+      </section> */}
 
       <section className="section-padding bg-beige-light">
         <div className="container-main">
@@ -140,15 +160,16 @@ export default function SchoolMhmComplianceSolutionsPage() {
             <div className="max-w-4xl">
               <p className="kicker">Policy context</p>
               <h2 className="text-3xl md:text-4xl font-bold text-navy">
-                Supreme Court Mandate &amp; CBSE Circular
+                Supreme Court Mandate &amp; CBSE 2026 Compliance
               </h2>
               <p className="mt-5 text-gray-700 leading-relaxed">
                 Menstrual hygiene has been recognized as a fundamental right
                 linked to dignity, health, and equality under Article 21.
-                Schools are expected to create safe and inclusive environments
-                through reliable sanitation readiness, access to sanitary
-                napkins, awareness-oriented interventions, and proper disposal
-                systems. Implementation readiness and compliance reporting are
+                As government initiatives actively promote menstrual hygiene awareness in India, 
+                achieving CBSE 2026 MHM compliance has become a central focus. Schools are expected to 
+                create safe and inclusive environments through reliable sanitation readiness, 
+                access to sanitary napkins, awareness-oriented interventions, and proper 
+                disposal systems. Implementation readiness and compliance reporting are
                 critical for institutions to demonstrate policy-aligned action.
               </p>
             </div>
@@ -194,6 +215,9 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-navy">
                 End-to-End MHM Compliance Support
               </h2>
+              <p className="mt-5 text-gray-700 leading-relaxed">
+                Our comprehensive support model features an affordable sanitary pad machine and a reliable sanitary pad making machine India relies on. We assist institutions in setting up a complete sanitary napkin manufacturing unit, alongside scalable low cost sanitary napkin machine systems designed specifically for Indian schools and rural environments.
+              </p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-2 gap-4 mt-8">
@@ -218,6 +242,9 @@ export default function SchoolMhmComplianceSolutionsPage() {
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
                   In-School Sanitary Napkin Production Unit
                 </h2>
+                <p className="mt-4 text-gray-700 leading-relaxed text-sm">
+                  This model creates immediate product access while driving forward rural women livelihood India initiatives. By operating as a leading women empowerment NGO India can trust, our solutions build self-sustaining micro-economies within communities.
+                </p>
                 <ul className="mt-6 space-y-3">
                   {[
                     "Continuous availability",
@@ -314,6 +341,9 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-navy">
                 Proven Implementation Outcomes
               </h2>
+              <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+                Rag Innovations is actively contributing to menstrual hygiene awareness in India, providing reliable maternity pad machine infrastructure and compliant solutions mapped directly to on-ground impact.
+              </p>
             </div>
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-6">

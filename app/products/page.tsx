@@ -42,12 +42,7 @@ const products = [
     description:
       "Solar-powered sanitary napkin machine for off-grid and remote areas with limited electricity access.",
   },
-  {
-    image: "/images/prod-10.jpg",
-    title: "Sanitary Pad Manufacturer Unit",
-    description:
-      "Complete manufacturing unit setup with machine, raw materials, and training for immediate production.",
-  },
+ 
   {
     image: "/images/prod-6.png",
     title: "Sanitary Napkin Vending Machine",
@@ -66,11 +61,23 @@ const products = [
     description:
       "Premium raw materials — top sheets, absorbent cores, backing, and packaging for consistent pad quality.",
   },
-  {
-    image: "/images/prod-11.jpg",
-    title: "Sanitary Napkin Machine",
+  // {
+  //   image: "/images/prod-11.jpg",
+  //   title: "Sanitary Napkin Machine",
+  //   description:
+  //     "Versatile sanitary napkin making machine suitable for a wide range of production capacities and budgets.",
+  // },
+   {
+    image: "/images/prod-10.jpg",
+    title: "Premium Sanitary Pads-Cottorin",
     description:
-      "Versatile sanitary napkin making machine suitable for a wide range of production capacities and budgets.",
+      "High-quality, ultra-comfort sanitary pads with superior absorption and skin-friendly protection — ensuring safe, hygienic, all-day confidence.",
+  },
+  {
+    image: "/images/prod-12.jpeg",
+    title: "Affordable Sanitary Pads-Padwala",
+    description:
+      "Cost-effective, hygienic sanitary pads designed for reliable protection and everyday comfort — ideal for wide accessibility.",
   },
 ];
 
@@ -106,7 +113,7 @@ export default function ProductsPage() {
                     </p>
                     <Link
                       href="/contact"
-                      className="inline-flex items-center text-sm font-medium text-cta mt-4 hover:underline"
+                      className="inline-flex items-center text-sm font-medium text-cta mt-4 hover:underline text-primary"
                     >
                       Enquire Now &rarr;
                     </Link>

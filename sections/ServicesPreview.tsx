@@ -25,8 +25,8 @@ const services = [
     title: "Hands-on Vocational Training",
     description:
       "Comprehensive Skill India and Make in India aligned training programs. From machine operation to quality control and business management for sustainable enterprises.",
-    color: "bg-beige/40",
-    iconColor: "text-primary-dark",
+    color: "bg-primary/10",
+    iconColor: "text-primary",
   },
 ];
 

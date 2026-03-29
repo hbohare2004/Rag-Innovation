@@ -1,26 +1,36 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import FadeIn from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
-export const metadata: Metadata = {
-  title: "Gallery",
-  description:
-    "Awards, media coverage, partner logos, and project highlights from Rag Innovations — celebrating impact in menstrual hygiene and women empowerment across India.",
-};
+
 
 const awards = [
-  { src: "/images/1.png", alt: "National Startup Award for Rag Innovations" },
-  { src: "/images/2.png", alt: "Doordarshan media coverage of Rag Innovations" },
-  { src: "/images/3.png", alt: "Dainik Bhaskar news feature" },
-  { src: "/images/4.png", alt: "Ministry of Health certificate of recognition" },
-  { src: "/images/5.png", alt: "Social impact award ceremony" },
-  { src: "/images/6.png", alt: "Meeting with government officials" },
-  { src: "/images/7.png", alt: "IIT Delhi innovation fest participation" },
-  { src: "/images/8.jpeg", alt: "Rag Innovations team with industry leaders" },
-  { src: "/images/10.png", alt: "Swachh Bharat media interview" },
+  { src: "/images/1.png", alt: "" },
+  { src: "/images/2.png", alt: "" },
+  { src: "/images/3.png", alt: "" },
+  { src: "/images/4.png", alt: "" },
+  { src: "/images/5.png", alt: "" },
+  { src: "/images/11.jpeg", alt:"" },
+  { src: "/images/12.jpeg", alt: "" },
+  { src: "/images/8.jpeg", alt: "" },
+  { src: "/images/10.png", alt: "" },
+  {src:"/images/13.jpeg", alt:""},
+  {src:"/images/14.jpeg", alt:""},
+  {src:"/images/15.jpeg", alt:""},
+];
+
+/** YouTube video IDs — thumbnails from img.youtube.com; click plays embed in place */
+const galleryVideos: { id: string; title: string; start?: number }[] = [
+  { id: "SzgbYPaqsJY", title: "Rag Innovations — featured video" },
+  { id: "oK9Y2wPP83M", title: "Rag Innovations — media coverage", start: 28 },
+  { id: "-uVJcF-uNes", title: "Rag Innovations — impact story" },
+  { id: "RKwIazG6OW4", title: "Rag Innovations — programme highlight" },
+  { id: "G5i750GRcik", title: "Rag Innovations — community work" },
 ];
 
 const partners = [
@@ -75,6 +85,9 @@ const projects = [
 ];
 
 export default function GalleryPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
+
   return (
     <>
       <PageHero
@@ -96,18 +109,90 @@ export default function GalleryPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {awards.map((award, i) => (
               <FadeIn key={award.src} delay={i * 0.08}>
-                <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
-                  <Image
-                    src={award.src}
-                    alt={award.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                <div 
+                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 shadow-sm cursor-pointer"
+                  onClick={() => setSelectedImage(award.src)}
+                >
+                    <Image
+                      src={award.src}
+                      alt={award.alt}
+                      fill
+                      className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <p className="absolute bottom-0 left-0 right-0 p-4 text-white text-xs font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                     {award.alt}
                   </p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Videos — same box grid as awards; thumbnail until click, then embedded player */}
+      <section className="section-padding">
+        <div className="container-main">
+          <FadeIn>
+            <SectionHeading
+              kicker="Watch"
+              title="Videos"
+              subtitle="Tap a thumbnail to play. Our work in motion — same layout as the gallery above."
+            />
+          </FadeIn>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {galleryVideos.map((video, i) => (
+              <FadeIn key={video.id} delay={i * 0.08}>
+                <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 shadow-sm">
+                  {playingVideoId === video.id ? (
+                    <div className="absolute inset-0 flex flex-col bg-black">
+                      <iframe
+                        title={video.title}
+                        src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=0${video.start != null ? `&start=${video.start}` : ""}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="h-full w-full border-0"
+                      />
+                      <button
+                        type="button"
+                        className="absolute right-2 top-2 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black/80"
+                        onClick={() => setPlayingVideoId(null)}
+                        aria-label="Close video"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      className="relative h-full w-full cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                      onClick={() => setPlayingVideoId(video.id)}
+                      aria-label={`Play video: ${video.title}`}
+                    >
+                      <Image
+                        src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                        alt={video.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                          <svg className="ml-1 h-7 w-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </span>
+                      </span>
+                      <p className="absolute bottom-0 left-0 right-0 p-4 text-xs font-medium text-white drop-shadow">
+                        {video.title}
+                      </p>
+                    </button>
+                  )}
                 </div>
               </FadeIn>
             ))}
@@ -184,6 +269,34 @@ export default function GalleryPage() {
         primaryLink={{ href: "/contact", label: "Contact Us" }}
         secondaryLink={{ href: "/products", label: "Browse Products" }}
       />
+
+      {/* Image Modal for Enlarged View */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in zoom-in-95 duration-200"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative w-full max-w-5xl h-[85vh]">
+            <button 
+              className="absolute -top-12 right-0 md:-right-12 md:top-0 text-white hover:text-gray-300 transition-colors bg-white/10 hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center focus:outline-none z-50"
+              onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
+              aria-label="Close"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Enlarged view"
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
