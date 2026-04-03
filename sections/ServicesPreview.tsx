@@ -38,7 +38,34 @@ export default function ServicesPreview() {
           <SectionHeading
             kicker="What we do"
             title="End-to-End Solutions For Menstrual Hygiene Management"
-            subtitle="From machines, raw materials, training, and awareness programs, we help you set up and scale sustainable sanitary napkin and maternity pad units."
+            subtitle={
+              <>
+                From{" "}
+                <Link
+                  href="/sanitary-machine"
+                  className="text-primary font-medium hover:underline"
+                >
+                  sanitary napkin making machine
+                </Link>{" "}
+                supply,{" "}
+                <Link
+                  href="/services"
+                  className="text-primary font-medium hover:underline"
+                >
+                  sanitary napkin raw materials
+                </Link>
+                , training, and awareness programs, we help you set up and scale
+                sustainable sanitary napkin and maternity pad units—including
+                practical paths for a{" "}
+                <Link
+                  href="/contact"
+                  className="text-primary font-medium hover:underline"
+                >
+                  sanitary pad business in India
+                </Link>
+                .
+              </>
+            }
           />
         </FadeIn>
 

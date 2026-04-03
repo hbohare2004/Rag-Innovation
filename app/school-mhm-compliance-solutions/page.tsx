@@ -19,9 +19,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "School MHM Compliance Solutions | Sanitary Pad Machine India | Rag Innovations",
+  title: "School MHM Compliance Solutions",
   description:
-    "Rag Innovations provides menstrual hygiene awareness solutions in India with an affordable sanitary pad machine, school compliance systems, and sanitary napkin manufacturing units.",
+    "School MHM compliance support in India: safe sanitation, sanitary napkin access, awareness, and documentation—aligned with institutional requirements. Rag Innovations implementation partner.",
+  keywords: [
+    "school menstrual hygiene India",
+    "MHM compliance schools",
+    "sanitary napkin making machine school",
+  ],
 };
 
 const requirements = [

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import SectionHeading from "@/components/SectionHeading";
 import { Users, School, Heart, Handshake } from "lucide-react";
@@ -16,7 +17,29 @@ export default function IntroSection() {
         <FadeIn>
           <SectionHeading
             title="Spreading Menstrual Hygiene Awareness Across Globe"
-            subtitle="We collaborate with educational institutions, CSR initiatives, government organizations, social clubs, NGOs, self-help groups, and individuals to spread awareness, break menstrual myths, and create sustainable menstrual hygiene solutions that make a real impact at the grassroots level."
+            subtitle={
+              <>
+                We collaborate with educational institutions, CSR initiatives,
+                government organizations, social clubs, NGOs, self-help groups,
+                and individuals to spread awareness, break menstrual myths, and
+                create sustainable menstrual hygiene solutions that make a real
+                impact at the grassroots level. We also support teams planning a{" "}
+                <Link
+                  href="/sanitary-machine"
+                  className="text-primary font-medium hover:underline"
+                >
+                  pad making machine India
+                </Link>{" "}
+                rollout or sourcing{" "}
+                <Link
+                  href="/services"
+                  className="text-primary font-medium hover:underline"
+                >
+                  sanitary napkin raw materials
+                </Link>{" "}
+                for continuous production.
+              </>
+            }
           />
         </FadeIn>
 

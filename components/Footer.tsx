@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -9,8 +8,10 @@ import {
   Twitter,
   Instagram,
   Youtube,
+  Linkedin,
   ArrowRight,
 } from "lucide-react";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 const quickLinks = [
   { href: "/about", label: "About Us" },
@@ -42,6 +43,11 @@ const socials = [
     icon: Youtube,
     label: "YouTube",
   },
+  {
+    href: "https://www.linkedin.com/company/rag-innovations/",
+    icon: Linkedin,
+    label: "LinkedIn",
+  },
 ];
 
 export default function Footer() {
@@ -52,25 +58,22 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <div 
-                className="h-14 w-40 bg-primary"
-                style={{
-                  WebkitMaskImage: 'url(/images/logo.png)',
-                  WebkitMaskSize: 'contain',
-                  WebkitMaskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'left center',
-                  maskImage: 'url(/images/logo.png)',
-                  maskSize: 'contain',
-                  maskRepeat: 'no-repeat',
-                  maskPosition: 'left center',
-                }}
+              <div
+                className="footer-logo-mask h-14 w-40 bg-primary"
                 aria-label="Rag Innovations Logo"
                 role="img"
               />
             </Link>
             <p className="text-sm leading-relaxed text-gray-400 mb-6">
-              Affordable and sustainable menstrual hygiene solutions. Empowering
-              communities through innovation, training, and awareness.
+              Affordable and sustainable menstrual hygiene solutions—including{" "}
+              <Link
+                href="/sanitary-machine"
+                className="text-gray-300 hover:text-primary transition-colors"
+              >
+                sanitary napkin making machine
+              </Link>{" "}
+              options for India. Empowering communities through innovation,
+              training, and awareness.
             </p>
             <div className="flex gap-3">
               {socials.map((s) => (
@@ -137,12 +140,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail size={16} className="text-primary shrink-0 mt-0.5" />
-                <a
-                  href="mailto:raginnovations@gmail.com"
-                  className="hover:text-primary transition-colors"
-                >
-                  raginnovations@gmail.com
-                </a>
+                <ObfuscatedEmail className="hover:text-primary transition-colors" />
               </li>
               <li className="flex gap-3">
                 <MapPin size={16} className="text-primary shrink-0 mt-0.5" />

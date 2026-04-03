@@ -8,7 +8,12 @@ import { Cog, Megaphone, GraduationCap, Wrench, Check, Star } from "lucide-react
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent, impact-first pricing for sanitary napkin making machines, awareness campaigns, vocational training, and existing unit support by Rag Innovations.",
+    "Transparent pricing for low cost sanitary machine setup, sanitary napkin making machine packages, awareness campaigns, vocational training, and unit support — Rag Innovations India.",
+  keywords: [
+    "low cost sanitary machine price India",
+    "sanitary napkin making machine cost",
+    "pad making machine India pricing",
+  ],
 };
 
 const plans = [

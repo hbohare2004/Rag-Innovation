@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://raginnovations.com/sitemap.xml",
+    sitemap: "https://www.raginnovations.com/sitemap.xml",
   };
 }

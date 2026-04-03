@@ -14,7 +14,13 @@ import {
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "End-to-end solutions for menstrual hygiene enterprises — sanitary pad machines, raw materials, maintenance, training, and awareness campaigns by Rag Innovations.",
+    "End-to-end solutions for menstrual hygiene enterprises — sanitary napkin making machine support, sanitary napkin raw materials, maintenance, training, and awareness by Rag Innovations in India.",
+  keywords: [
+    "sanitary napkin making machine",
+    "sanitary napkin raw materials",
+    "pad making machine India",
+    "low cost sanitary machine",
+  ],
 };
 
 const services = [

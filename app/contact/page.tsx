@@ -9,16 +9,23 @@ import {
   Clock,
 } from "lucide-react";
 import ContactRequestForm from "@/components/ContactRequestForm";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Rag Innovations for sanitary napkin making machines, pricing, training, and partnerships. Head office in Bhopal, manufacturing plant in Bhind, Madhya Pradesh.",
+    "Contact Rag Innovations for sanitary napkin making machine quotes, pad making machine India support, sanitary napkin raw materials, pricing, and training. Bhopal office & Bhind manufacturing.",
+  keywords: [
+    "sanitary napkin making machine contact",
+    "pad making machine India",
+    "sanitary napkin raw materials supplier",
+  ],
 };
 
 interface ContactLine {
-  text: string;
+  text?: string;
   href?: string;
+  obfuscated?: boolean;
 }
 
 const contactInfo: {
@@ -38,12 +45,7 @@ const contactInfo: {
   {
     icon: Mail,
     title: "Email",
-    lines: [
-      {
-        text: "raginnovations@gmail.com",
-        href: "mailto:raginnovations@gmail.com",
-      },
-    ],
+    lines: [{ obfuscated: true }],
   },
   {
     icon: MapPin,
@@ -95,8 +97,13 @@ export default function ContactPage() {
                         <h3 className="font-semibold text-navy text-sm mb-1">
                           {item.title}
                         </h3>
-                        {item.lines.map((line) =>
-                          line.href ? (
+                        {item.lines.map((line, idx) =>
+                          line.obfuscated ? (
+                            <ObfuscatedEmail
+                              key={`obf-${idx}`}
+                              className="block text-sm text-gray-600 hover:text-cta transition-colors"
+                            />
+                          ) : line.href ? (
                             <a
                               key={line.text}
                               href={line.href}

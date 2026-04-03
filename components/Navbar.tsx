@@ -43,7 +43,7 @@ export default function Navbar() {
         <Link href="/">
           <Image
             src="/images/logo.png"
-            alt="Rag Innovations"
+            alt="Rag Innovations — sanitary napkin making machine manufacturer India logo"
             width={200}
             height={58}
             className="h-12 md:h-14 w-auto cursor-pointer"
@@ -81,7 +81,7 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <Link href="/contact" className="btn-cta ml-3 text-xs px-5 py-2.5 bg-primary text-white #9C1C2B">
+          <Link href="/contact" className="btn-cta ml-3 text-xs px-5 py-2.5 bg-primary text-white min-h-10 inline-flex items-center justify-center">
             Talk to Our Team
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-navy hover:text-primary transition-colors"
+          className="lg:hidden min-h-11 min-w-11 p-2 inline-flex items-center justify-center text-navy hover:text-primary transition-colors"
           aria-label="Toggle navigation"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}

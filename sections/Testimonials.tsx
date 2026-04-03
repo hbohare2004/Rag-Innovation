@@ -60,7 +60,7 @@ export default function Testimonials() {
                 <div className="relative w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-primary/10">
                   <Image
                     src={testimonials[current].image}
-                    alt={testimonials[current].name}
+                    alt={`${testimonials[current].name}, ${testimonials[current].role} — client testimonial for Rag Innovations pad making machine India`}
                     fill
                     className="object-cover"
                     sizes="80px"
@@ -80,7 +80,7 @@ export default function Testimonials() {
               <div className="flex items-center justify-center gap-4 mt-8">
                 <button
                   onClick={prev}
-                  className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary transition-colors"
+                  className="min-h-11 min-w-11 h-11 w-11 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary transition-colors"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft size={18} />
@@ -101,7 +101,7 @@ export default function Testimonials() {
                 </div>
                 <button
                   onClick={next}
-                  className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary transition-colors"
+                  className="min-h-11 min-w-11 h-11 w-11 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:border-primary hover:text-primary transition-colors"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight size={18} />

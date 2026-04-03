@@ -9,33 +9,33 @@ import { ChevronLeft, ChevronRight, BadgeCheck, Award, Globe, GraduationCap } fr
 const slides = [
   {
     src: "/images/bg_3.jpeg",
-    alt: "Vocational training for sanitary pad production",
+    alt: "Vocational training for sanitary pad production with low cost sanitary machine India",
     title: "Building Self-Reliant Menstrual Hygiene Enterprises",
   },
   
   {
     src: "/images/bg_1.png",
-    alt: "Sanitary pad manufacturing unit in rural India",
+    alt: "Semi automatic sanitary napkin machine manufacturing unit in rural India",
     title: "Innovating Affordable Menstrual Hygiene Technologies",
   },
   {
     src: "/images/bg_12.png",
-    alt: "Affordable sanitary pad machine installation",
+    alt: "Affordable sanitary pad machine installation — pad making machine India",
     title: "Training Communities for a Better Tomorrow",
   },
   {
     src: "/images/bg_11.jpeg",
-    alt: "Women empowerment through menstrual hygiene awareness",
+    alt: "Women empowerment through menstrual hygiene awareness and sanitary napkin making machine training",
     title: "From Awareness to Action",
   },
   {
     src: "/images/bg_13.jpeg",
-    alt: "Supporting School MHM Compliance Across India",
+    alt: "School MHM compliance and sanitary napkin access programmes across India",
     title: "Supporting School MHM Compliance Across India",
   },
   {
     src: "/images/bg_5.png",
-    alt: "Low-cost sanitary napkin making machine by Rag Innovations",
+    alt: "Low cost sanitary machine by Rag Innovations — sanitary napkin making machine India",
     title: "Creating Impact From Local To Global",
   },
   
@@ -118,9 +118,22 @@ export default function HeroSection() {
             className="mt-6 text-gray-200 text-base md:text-lg leading-relaxed max-w-2xl"
           >
             Rag Innovations designs, builds, and supports affordable sanitary
-            napkin and maternity pad manufacturing machines so communities can
-            create dignified livelihoods and healthier futures for women and
-            girls.
+            napkin and maternity pad manufacturing—including a proven{" "}
+            <Link
+              href="/sanitary-machine"
+              className="text-gray-100 underline decoration-white/35 underline-offset-2 hover:decoration-white"
+            >
+              sanitary napkin making machine
+            </Link>{" "}
+            range and{" "}
+            <Link
+              href="/services"
+              className="text-gray-100 underline decoration-white/35 underline-offset-2 hover:decoration-white"
+            >
+              sanitary napkin raw materials
+            </Link>{" "}
+            programmes—so communities can create dignified livelihoods and
+            healthier futures for women and girls.
           </motion.p>
 
           {/* Badges */}
@@ -148,12 +161,12 @@ export default function HeroSection() {
             transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 mt-10"
           >
-            <Link href="/products" className="btn-cta text-base px-8 py-4 bg-primary text-white #9C1C2B">
+            <Link href="/products" className="btn-cta text-base px-8 py-4 bg-primary text-white min-h-11 min-w-[44px] inline-flex items-center justify-center">
               Explore Machines
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold text-base transition-all duration-300 hover:bg-white/10 hover:border-white/60"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold text-base transition-all duration-300 hover:bg-white/10 hover:border-white/60 min-h-11 min-w-[44px]"
             >
               Schedule a Visit
             </Link>
@@ -165,14 +178,14 @@ export default function HeroSection() {
       <div className="absolute bottom-8 right-8 z-10 flex gap-2">
         <button
           onClick={prev}
-          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          className="min-h-11 min-w-11 h-11 w-11 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={next}
-          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+          className="min-h-11 min-w-11 h-11 w-11 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/30 transition-colors"
           aria-label="Next slide"
         >
           <ChevronRight size={20} />

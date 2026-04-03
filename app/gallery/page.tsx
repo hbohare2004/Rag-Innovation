@@ -10,27 +10,27 @@ import CTASection from "@/components/CTASection";
 
 
 const awards = [
-  { src: "/images/1.png", alt: "" },
-  { src: "/images/2.png", alt: "" },
-  { src: "/images/3.png", alt: "" },
-  { src: "/images/4.png", alt: "" },
-  { src: "/images/5.png", alt: "" },
-  { src: "/images/11.jpeg", alt:"" },
-  { src: "/images/12.jpeg", alt: "" },
-  { src: "/images/8.jpeg", alt: "" },
-  { src: "/images/10.png", alt: "" },
-  {src:"/images/13.jpeg", alt:""},
-  {src:"/images/14.jpeg", alt:""},
-  {src:"/images/15.jpeg", alt:""},
+  { src: "/images/1.png", alt: "National Startup Award for Rag Innovations — sanitary napkin making machine India" },
+  { src: "/images/2.png", alt: "Doordarshan media coverage of Rag Innovations pad making machine India" },
+  { src: "/images/3.png", alt: "Dainik Bhaskar news feature — low cost sanitary machine social enterprise" },
+  { src: "/images/4.png", alt: "Ministry of Health certificate of recognition — menstrual hygiene programme India" },
+  { src: "/images/5.png", alt: "Social impact award ceremony — women empowerment and sanitary pad business India" },
+  { src: "/images/11.jpeg", alt: "Rag Innovations event and sanitary napkin making machine recognition" },
+  { src: "/images/12.jpeg", alt: "Rag Innovations team at menstrual hygiene awareness programme India" },
+  { src: "/images/8.jpeg", alt: "Rag Innovations team with industry leaders — semi automatic sanitary napkin machine partners" },
+  { src: "/images/10.png", alt: "Swachh Bharat media interview — sanitary napkin raw materials and machine innovation" },
+  { src: "/images/13.jpeg", alt: "Rag Innovations gallery — pad making machine India community impact" },
+  { src: "/images/14.jpeg", alt: "Rag Innovations gallery — vocational training sanitary pad production" },
+  { src: "/images/15.jpeg", alt: "Rag Innovations gallery — low cost sanitary machine installation highlight" },
 ];
 
 /** YouTube video IDs — thumbnails from img.youtube.com; click plays embed in place */
 const galleryVideos: { id: string; title: string; start?: number }[] = [
-  { id: "SzgbYPaqsJY", title: "Rag Innovations — featured video" },
-  { id: "oK9Y2wPP83M", title: "Rag Innovations — media coverage", start: 28 },
-  { id: "-uVJcF-uNes", title: "Rag Innovations — impact story" },
-  { id: "RKwIazG6OW4", title: "Rag Innovations — programme highlight" },
-  { id: "G5i750GRcik", title: "Rag Innovations — community work" },
+  { id: "SzgbYPaqsJY", title: "YouTube — Rag Innovations sanitary napkin making machine India featured video" },
+  { id: "oK9Y2wPP83M", title: "YouTube — Rag Innovations pad making machine India media coverage", start: 28 },
+  { id: "-uVJcF-uNes", title: "YouTube — Rag Innovations low cost sanitary machine impact story" },
+  { id: "RKwIazG6OW4", title: "YouTube — Rag Innovations sanitary napkin raw materials and programme highlight" },
+  { id: "G5i750GRcik", title: "YouTube — Rag Innovations sanitary pad business India community work" },
 ];
 
 const partners = [
@@ -217,7 +217,7 @@ export default function GalleryPage() {
                 <div className="bg-white rounded-xl p-3 flex items-center justify-center aspect-square shadow-sm hover:shadow-md transition-shadow group">
                   <Image
                     src={partner.src}
-                    alt={partner.alt}
+                    alt={`${partner.alt} — Rag Innovations sanitary napkin making machine India partner`}
                     width={160}
                     height={160}
                     className="object-contain w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -247,7 +247,7 @@ export default function GalleryPage() {
                   <div className="relative aspect-video overflow-hidden bg-gray-100">
                     <Image
                       src={project.src}
-                      alt={project.caption}
+                      alt={`${project.caption} — Rag Innovations pad making machine India on-ground project`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 50vw"
@@ -288,7 +288,7 @@ export default function GalleryPage() {
             </button>
             <Image
               src={selectedImage}
-              alt="Enlarged view"
+              alt="Enlarged gallery image — Rag Innovations awards, media, and sanitary napkin making machine India highlights"
               fill
               className="object-contain"
               sizes="100vw"

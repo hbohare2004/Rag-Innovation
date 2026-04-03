@@ -18,13 +18,7 @@ export default function CTASection({
   return (
     <section className="relative py-20 md:py-28 overflow-hidden bg-primary">
       <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-          }}
-        />
+        <div className="absolute inset-0 cta-bg-pattern" />
       </div>
       <div className="container-main relative text-center">
         {kicker && (

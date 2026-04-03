@@ -24,6 +24,7 @@
   body {
     color: var(--color-body);
     font-family: var(--font-sans);
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -78,6 +79,29 @@
 
   .kicker {
     @apply text-primary font-semibold text-sm uppercase tracking-widest mb-3;
+  }
+
+  .footer-logo-mask {
+    -webkit-mask-image: url(/images/logo.png);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left center;
+    mask-image: url(/images/logo.png);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: left center;
+  }
+
+  .cta-bg-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  }
+
+  .impact-bg-pattern {
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(156, 28, 43, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(228, 87, 46, 0.2) 0%, transparent 50%);
   }
 }
 

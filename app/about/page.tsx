@@ -8,7 +8,13 @@ import { Target, Eye, Sparkles, Calendar, Users, Building2, Heart, Zap, Gauge, S
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Rag Innovations — a DPIIT-recognised startup manufacturing affordable sanitary pad machines, empowering women through menstrual hygiene awareness and vocational training across India.",
+    "Learn about Rag Innovations — DPIIT-recognised manufacturer of sanitary napkin making machine and pad making machine India solutions, plus sanitary napkin raw materials, training, and women’s empowerment programmes.",
+  keywords: [
+    "sanitary napkin making machine manufacturer India",
+    "pad making machine India",
+    "low cost sanitary machine",
+    "sanitary pad business India",
+  ],
 };
 
 const values = [
@@ -200,7 +206,7 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl bg-white">
               <img
                 src="/images/map.png"
-                alt="Rag Innovations global impact map"
+                alt="Rag Innovations global impact map — sanitary napkin making machine and pad making machine India installations worldwide"
                 className="w-full h-auto object-contain"
                 loading="lazy"
               />

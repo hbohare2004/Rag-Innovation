@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://raginnovations.com";
+const BASE_URL = "https://www.raginnovations.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gallery",
     "/pricing",
     "/contact",
+    "/school-mhm-compliance-solutions",
   ];
 
   return routes.map((route) => ({

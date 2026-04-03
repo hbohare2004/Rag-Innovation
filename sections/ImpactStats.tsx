@@ -13,13 +13,7 @@ export default function ImpactStats() {
   return (
     <section className="relative py-20 md:py-28 bg-navy overflow-hidden">
       <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 25% 25%, rgba(156,28,43,0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(228,87,46,0.2) 0%, transparent 50%)",
-          }}
-        />
+        <div className="absolute inset-0 impact-bg-pattern" />
       </div>
       <div className="container-main relative">
         <FadeIn>

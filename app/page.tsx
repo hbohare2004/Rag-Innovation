@@ -3,6 +3,8 @@ import IntroSection from "@/sections/IntroSection";
 import ServicesPreview from "@/sections/ServicesPreview";
 import ImpactStats from "@/sections/ImpactStats";
 import Testimonials from "@/sections/Testimonials";
+import SeoContentSection from "@/sections/SeoContentSection";
+import HomeFaqSection from "@/sections/HomeFaqSection";
 import CTASection from "@/components/CTASection";
 
 export default function HomePage() {
@@ -13,6 +15,8 @@ export default function HomePage() {
       <ServicesPreview />
       <ImpactStats />
       <Testimonials />
+      <SeoContentSection />
+      <HomeFaqSection />
       <CTASection
         kicker="Get started"
         title="Ready To Explore A Sanitary Napkin Making Machine For You?"
