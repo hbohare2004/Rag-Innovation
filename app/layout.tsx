@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   description:
     "Affordable sanitary napkin machines in India. Start your pad business with Rag Innovations.",
   icons: {
-    icon: [{ url: "/favicon.ico", type: "image/x-icon" }],
-    shortcut: "/favicon.ico",
+    icon: [{ url: "/logo.png", type: "image/x-icon" }],
+    shortcut: "/logo.png",
   },
   keywords: [
     "sanitary napkin making machine",
