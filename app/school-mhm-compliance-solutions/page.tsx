@@ -38,52 +38,96 @@ import {
   mhmTestimonials,
 } from "./mhm-data";
 
-/* ── SEO metadata (CBSE Circular Acad-12/2026) ─ */
+/* ── SEO metadata ─────────────────────────────── */
 
 export const metadata: Metadata = {
-  title:
-    "School MHM Compliance | Menstrual Hygiene Management (MHM) — CBSE Circular Acad-12/2026",
+  title: "MHM Compliance for Schools India",
   description:
-    "Menstrual Hygiene Management (MHM) in schools: CBSE compliance with directions of the Hon'ble Supreme Court — infrastructure, availability of biodegradable sanitary napkins & MHM corners, waste management, awareness (menstrual health, puberty, gender-sensitive discussions), periodic inspections. School MHM compliance support by Rag Innovations.",
+    "Achieve MHM compliance in your school — CBSE Circular Acad-12/2026. Vending machines, incinerators, MHM corners & training by Rag Innovations.",
   keywords: [
-    "Menstrual Hygiene Management",
-    "MHM",
+    "MHM Compliance",
+    "Menstrual Hygiene Management Compliance",
+    "MHM Compliance India",
+    "School MHM Solutions",
+    "Menstrual Hygiene Solutions for Schools",
+    "Sanitary Napkin Disposal Machine",
+    "MHM Guidelines for Schools India",
     "CBSE MHM Compliance 2026",
-    "School MHM Compliance",
-    "Menstrual health in schools",
     "CBSE Circular Acad-12/2026",
+    "MHM corner setup",
+    "school sanitation India",
     "biodegradable sanitary napkins",
-    "MHM corners",
-    "Article 21 menstrual health",
+    "sanitary napkin vending machine",
+    "menstrual health in schools",
+    "adolescent girls hygiene",
   ],
+  alternates: {
+    canonical: "https://www.raginnovations.com/school-mhm-compliance-solutions",
+  },
+  openGraph: {
+    title: "MHM Compliance for Schools India | Rag Innovations",
+    description:
+      "Achieve MHM compliance in your school — CBSE Circular Acad-12/2026. Vending machines, incinerators, MHM corners & training by Rag Innovations.",
+    url: "https://www.raginnovations.com/school-mhm-compliance-solutions",
+    type: "website",
+    images: [
+      {
+        url: "/images/MHM_corner.jpeg",
+        alt: "MHM compliance corner setup in a school — Rag Innovations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CBSE MHM Compliance Solutions for Schools | Rag Innovations",
+    description:
+      "Achieve full MHM compliance with CBSE Circular Acad-12/2026. Expert solutions for infrastructure, waste management, and student awareness.",
+    images: ["/images/MHM_corner.jpeg"],
+  },
 };
 
-/* ── CBSE circular — FAQs (wording traceable to Circular Acad-12/2026) ─ */
+/* ── SEO-optimised FAQs ───────────────────────── */
 
 const complianceFaqs: { question: string; answer: string }[] = [
   {
-    question:
-      "Which CBSE circular addresses Menstrual Hygiene Management (MHM) in schools?",
+    question: "What is MHM compliance for schools in India?",
     answer:
-      "Circular No. Acad-12/2026 dated 18.03.2026 — Subject: Compliance with directions of the Hon’ble Supreme Court regarding Menstrual Hygiene Management (MHM) in Schools – reg.",
+      "MHM compliance refers to the mandatory implementation of Menstrual Hygiene Management guidelines in schools as directed by the Hon'ble Supreme Court and enforced through CBSE Circular Acad-12/2026. It covers five areas — infrastructure, availability of biodegradable sanitary napkins and MHM corners, waste management, awareness training, and readiness for periodic inspections.",
   },
   {
     question:
-      "What does the Hon’ble Supreme Court’s judgement dated 20th January 2026 recognize?",
+      "Which CBSE circular addresses MHM compliance in schools?",
     answer:
-      "The Court has recognized the right to dignified menstrual health as an integral facet of Article 21 of the Constitution, emphasizing that access to Menstrual Hygiene Management (MHM) is essential for ensuring the right to education and equality of opportunity for adolescent girls.",
+      "CBSE Circular No. Acad-12/2026 dated 18.03.2026 directs all affiliated schools to comply with the Hon'ble Supreme Court's directions regarding Menstrual Hygiene Management (MHM) in Schools. The circular is traceable to the Court's judgement dated 20th January 2026.",
   },
   {
     question:
-      "What directions must CBSE affiliated schools comply with under the circular?",
+      "What does the Supreme Court's judgement recognise about menstrual health?",
     answer:
-      "1. Infrastructure: Schools shall ensure the availability of adequate, safe and hygienic separate toilet and washing facilities for girls. 2. Availability of biodegradable sanitary napkins & MHM corners for girls. 3. Waste Management: Proper disposal of sanitary waste. 4. Awareness: Schools shall conduct training regarding menstrual health and puberty for students. Schools may also integrate gender-sensitive discussions in line with NCERT/SCERT guidelines and encourage a supportive school environment. 5. Periodic inspections: Schools shall cooperate with periodic inspections by District Education Officers to monitor implementation of the above measures.",
+      "The Court recognised the right to dignified menstrual health as an integral facet of Article 21 of the Constitution. It emphasised that access to Menstrual Hygiene Management (MHM) is essential for ensuring the right to education and equality of opportunity for adolescent girls across India.",
   },
   {
     question:
-      "When may schools submit the compliance report referred to in the circular?",
+      "What are the 5 directions for MHM compliance under CBSE guidelines?",
     answer:
-      "Schools may submit the compliance report separately Month wise latest by 31st March, 2026 and 30th April, 2026 respectively in the google link: https://forms.gle/BD1F3c1N8GFrMarGA",
+      "1. Infrastructure — adequate, safe and hygienic separate toilet and washing facilities for girls. 2. Availability — biodegradable sanitary napkins and MHM corners. 3. Waste Management — proper disposal of sanitary waste using incinerators. 4. Awareness — menstrual health training and gender-sensitive education per NCERT/SCERT guidelines. 5. Periodic inspections — cooperation with District Education Officers.",
+  },
+  {
+    question: "How much does MHM compliance setup cost for a school?",
+    answer:
+      "The cost varies based on the package selected — Awareness, Compliance, or the full Sustainable Model — and depends on the school's student strength, existing infrastructure, and specific requirements. Rag Innovations provides customised proposals within 24 hours of enquiry.",
+  },
+  {
+    question:
+      "What equipment is needed for school MHM compliance?",
+    answer:
+      "Schools typically need a sanitary napkin vending machine for easy pad access, a sanitary pad incinerator for safe waste disposal, and a designated MHM corner in girls' washrooms. Schools opting for the Sustainable Model can also install an on-campus sanitary pad making machine.",
+  },
+  {
+    question:
+      "When is the deadline for CBSE MHM compliance reporting?",
+    answer:
+      "Schools may submit the compliance report month-wise — latest by 31st March 2026 and 30th April 2026 respectively — via the official CBSE google form link provided in Circular Acad-12/2026.",
   },
 ];
 
@@ -104,24 +148,25 @@ const cbseDirections = [
     icon: Building2,
     title: "Infrastructure",
     description:
-      "Schools shall ensure the availability of adequate, safe and hygienic separate toilet and washing facilities for girls.",
+      "Schools shall ensure the availability of adequate, safe and hygienic separate toilet and washing facilities for girls to maintain privacy and dignity.",
   },
   {
     icon: Package,
     title: "Availability",
     description:
-      "Availability of biodegradable sanitary napkins & MHM corners for girls.",
+      "Provision of high-quality biodegradable sanitary napkins and the establishment of dedicated MHM corners for girls to ensure uninterrupted access.",
   },
   {
     icon: Trash2,
     title: "Waste Management",
-    description: "Proper disposal of sanitary waste.",
+    description:
+      "Implementation of scientific and hygienic methods for the proper disposal of sanitary waste, including the use of incinerators and safe collection systems.",
   },
   {
     icon: GraduationCap,
     title: "Awareness",
     description:
-      "Schools should provide menstrual health training and gender-sensitive education as per NCERT/SCERT guidelines.",
+      "Conducting regular menstrual health training and gender-sensitive education sessions as per NCERT/SCERT guidelines to foster a supportive school environment.",
   },
   {
     icon: ClipboardList,
@@ -161,7 +206,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <Image
           src="/images/bg_3.jpeg"
-          alt="School MHM compliance solutions — awareness and training by Rag Innovations"
+          alt="MHM compliance solutions for schools in India — vending machines, incinerators, and MHM corners by Rag Innovations"
           fill
           className="object-cover"
           priority
@@ -172,23 +217,22 @@ export default function SchoolMhmComplianceSolutionsPage() {
         <div className="container-main relative z-10 py-20 text-center">
           <FadeIn>
             <span className="inline-block bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-5 py-2 rounded-full mb-6 uppercase tracking-wider border border-white/20">
-              CBSE Circular Acad-12/2026 · Menstrual Hygiene Management (MHM)
+              CBSE Circular Acad-12/2026 · MHM Compliance for Schools
             </span>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto text-balance">
-              Compliance with directions of the Hon&apos;ble Supreme Court
-              regarding Menstrual Hygiene Management (MHM) in Schools
+              MHM Compliance Solutions for Schools in India
             </h1>
             <p className="mt-5 text-gray-200 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              Implementation support for school MHM compliance: infrastructure;
-              availability of biodegradable sanitary napkins &amp; MHM corners;
-              waste management; awareness (menstrual health, puberty,
-              gender-sensitive discussions); and periodic inspections — aligned to
-              CBSE directions for affiliated schools.
+              Achieve complete MHM compliance for your school under CBSE Circular
+              Acad-12/2026. We provide end-to-end menstrual hygiene management
+              solutions — sanitary napkin vending machines, incinerators, MHM
+              corner setup, awareness training, and compliance documentation —
+              so your school meets every Supreme Court-mandated direction.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <a
                 href="#packages"
-                className="btn-cta text-base px-8 py-4 min-h-11 inline-flex items-center justify-center"
+                className="bg-primary btn-cta text-base px-8 py-4 min-h-11 inline-flex items-center justify-center"
               >
                 View Packages
               </a>
@@ -211,7 +255,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <div>
                 <p className="kicker">CBSE Circular Acad-12/2026</p>
                 <h2 className="text-3xl md:text-4xl font-bold text-navy">
-                  Menstrual Hygiene Management (MHM) — Supreme Court directions
+                  Why MHM Compliance Is Now Mandatory for Schools
                 </h2>
                 <p className="mt-5 text-gray-700 leading-relaxed">
                   The Ministry of Education has forwarded a copy of the Hon&apos;ble
@@ -270,10 +314,10 @@ export default function SchoolMhmComplianceSolutionsPage() {
           <FadeIn>
             <SectionHeading
               kicker="Directions (CBSE Circular Acad-12/2026)"
-              title="Menstrual Hygiene Management (MHM) — Areas of compliance"
+              title="5 Key Areas of MHM Compliance Under CBSE Guidelines"
             />
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cbseDirections.map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm card-hover h-full">
@@ -324,9 +368,9 @@ export default function SchoolMhmComplianceSolutionsPage() {
         <div className="container-main">
           <FadeIn>
             <SectionHeading
-              kicker="Equipment"
-              title="Machines & systems supporting CBSE MHM directions"
-              subtitle="Infrastructure, availability (biodegradable sanitary napkins & MHM corners), waste management, and awareness-related implementation support for schools."
+              kicker="MHM compliance equipment"
+              title="MHM Compliance Equipment for Schools"
+              subtitle="Sanitary napkin vending machines, incinerators, and MHM corner solutions — designed to meet CBSE Circular Acad-12/2026 requirements for menstrual hygiene management in schools."
             />
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-8">
@@ -345,8 +389,8 @@ export default function SchoolMhmComplianceSolutionsPage() {
           <FadeIn>
             <SectionHeading
               kicker="Technical details"
-              title="Machine Specifications"
-              subtitle="Quick-reference specifications to help procurement teams evaluate requirements."
+              title="Sanitary Napkin Machine Specifications"
+              subtitle="Quick-reference specifications for sanitary napkin vending machines, incinerators, and pad making machines to help school procurement teams evaluate requirements."
             />
           </FadeIn>
           <FadeIn>
@@ -402,9 +446,9 @@ export default function SchoolMhmComplianceSolutionsPage() {
         <div className="container-main">
           <FadeIn>
             <SectionHeading
-              kicker="Packages"
-              title="Choose the Right Package for Your School"
-              subtitle="Structured options mapped to Menstrual Hygiene Management (MHM) implementation — aligned with CBSE directions on infrastructure, availability, waste management, and awareness."
+              kicker="MHM compliance packages"
+              title="School MHM Compliance Packages"
+              subtitle="Choose from structured menstrual hygiene management solutions — aligned with CBSE directions on infrastructure, sanitary napkin availability, waste management, and awareness training."
             />
           </FadeIn>
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
@@ -438,8 +482,8 @@ export default function SchoolMhmComplianceSolutionsPage() {
           <FadeIn>
             <SectionHeading
               kicker="Side-by-side"
-              title="Package Comparison"
-              subtitle="See exactly what each tier includes so you can make an informed decision."
+              title="Compare MHM Compliance Packages"
+              subtitle="See exactly what each menstrual hygiene management tier includes so you can make an informed decision for your school."
             />
           </FadeIn>
           <FadeIn>
@@ -447,7 +491,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
           </FadeIn>
           <FadeIn>
             <div className="text-center mt-8">
-              <a href="#enquiry" className="btn-cta inline-flex items-center gap-2">
+              <a href="#enquiry" className="bg-primary btn-cta inline-flex items-center gap-2">
                 Request a Custom Proposal <ArrowRight size={16} />
               </a>
             </div>
@@ -461,8 +505,8 @@ export default function SchoolMhmComplianceSolutionsPage() {
           <FadeIn>
             <SectionHeading
               kicker="Optional"
-              title="Optional Infrastructure Support"
-              subtitle="These add-ons complement any package and are available separately based on school requirements."
+              title="Optional MHM Infrastructure Add-Ons"
+              subtitle="Additional menstrual hygiene solutions that complement any MHM compliance package — available separately based on your school’s requirements."
             />
           </FadeIn>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -504,7 +548,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm h-full">
                 <p className="kicker">Differentiator</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
-                  In-School Sanitary Napkin Production Unit
+                  In-School Sanitary Napkin Production for MHM Compliance
                 </h2>
                 <p className="mt-4 text-gray-700 leading-relaxed text-sm">
                   This model creates immediate product access while building
@@ -537,7 +581,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm h-full">
                 <p className="kicker">Who can benefit</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
-                  Institutions We Support
+                  Schools & Institutions We Help Achieve MHM Compliance
                 </h2>
                 <div className="mt-6 grid sm:grid-cols-2 gap-3">
                   {beneficiaries.map((item) => (
@@ -566,12 +610,12 @@ export default function SchoolMhmComplianceSolutionsPage() {
         <div className="container-main">
           <FadeIn>
             <SectionHeading
-              kicker="Implementation process"
-              title="Structured Rollout for Schools"
-              subtitle="A clear 5-step process from initial assessment to full compliance."
+              kicker="MHM implementation process"
+              title="5-Step MHM Compliance Implementation Process"
+              subtitle="A clear, structured rollout from initial assessment to full MHM compliance — tailored for schools across India."
             />
           </FadeIn>
-          <div className="grid md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 lg:gap-6">
             {processSteps.map((s, i) => (
               <FadeIn key={s.step} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center h-full card-hover">
@@ -598,7 +642,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
           <FadeIn>
             <SectionHeading
               kicker="Proven impact"
-              title="Trusted by Schools & Organisations Nationwide"
+              title="Trusted by 500+ Schools & Organisations for MHM Solutions"
               light
             />
           </FadeIn>
@@ -650,7 +694,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <FadeIn direction="left">
                 <p className="kicker">Get started</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-navy">
-                  Request Your Proposal
+                  Request Your MHM Compliance Proposal
                 </h2>
                 <p className="mt-4 text-gray-600 leading-relaxed text-sm">
                   Fill in your school&apos;s details and we&apos;ll prepare a
@@ -698,7 +742,7 @@ export default function SchoolMhmComplianceSolutionsPage() {
               <FadeIn direction="right">
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
                   <h3 className="text-xl font-bold text-navy mb-2">
-                    School MHM Enquiry
+                    School MHM Compliance Enquiry
                   </h3>
                   <p className="text-gray-500 text-sm mb-6">
                     We&apos;ll respond via email and WhatsApp.
@@ -716,8 +760,8 @@ export default function SchoolMhmComplianceSolutionsPage() {
         <div className="container-main">
           <FadeIn>
             <SectionHeading
-              kicker="FAQ"
-              title="Frequently Asked Questions"
+              kicker="MHM compliance FAQ"
+              title="MHM Compliance — Frequently Asked Questions"
               subtitle={
                 <>
                   Have a question not listed here?{" "}
@@ -751,10 +795,10 @@ export default function SchoolMhmComplianceSolutionsPage() {
 
       {/* ═══ 15 · FINAL CTA ══════════════════════ */}
       <CTASection
-        kicker="School MHM compliance"
-        title="Implementation support for Menstrual Hygiene Management (MHM)"
-        description="Request a proposal for infrastructure, availability of biodegradable sanitary napkins & MHM corners, waste management, awareness (menstrual health, puberty, gender-sensitive discussions), and cooperation with periodic inspections — in line with CBSE Circular Acad-12/2026."
-        primaryLink={{ href: "#enquiry", label: "Request Proposal" }}
+        kicker="Start your MHM compliance journey"
+        title="Start Your School’s MHM Compliance Journey Today"
+        description="Don’t wait for the next inspection. Request a customised MHM compliance proposal — covering infrastructure, sanitary napkin vending, waste disposal, awareness training, and full CBSE Circular Acad-12/2026 documentation support."
+        primaryLink={{ href: "#enquiry", label: "Get Your Free Proposal" }}
         secondaryLink={{ href: "/contact", label: "Book a Discussion" }}
       />
 

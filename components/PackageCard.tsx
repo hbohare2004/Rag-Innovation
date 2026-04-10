@@ -72,7 +72,7 @@ export default function PackageCard({
         href={ctaHref}
         className={`mt-8 w-full text-center py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
           highlighted
-            ? "bg-cta text-white hover:bg-cta-light hover:shadow-lg"
+            ? "bg-primary text-white hover:bg-primary-light hover:shadow-lg"
             : "border-2 border-primary text-primary hover:bg-primary hover:text-white hover:shadow-lg"
         }`}
       >

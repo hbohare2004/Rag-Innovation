@@ -17,7 +17,7 @@ export const products: MhmProduct[] = [
     image: "/images/prod-6.png",
     title: "Sanitary Napkin Vending Machine",
     description:
-      "Coin and card-operated sanitary napkin vending machine for instant, hygienic access—ensuring dignity, convenience, and CBSE-compliant menstrual hygiene management in schools and public spaces.",
+      "Coin and card-operated sanitary napkin vending machine for instant, hygienic pad access—a key component of MHM compliance, ensuring dignity, convenience, and CBSE-compliant menstrual hygiene management in schools.",
     benefits: [
       "50-pad storage capacity",
       "Coin & card operated",
@@ -29,7 +29,7 @@ export const products: MhmProduct[] = [
     image: "/images/prod-7.png",
     title: "Sanitary Pad Incinerator",
     description:
-      "School-ready sanitary pad incinerator with safe, hygienic, and eco-friendly disposal—ensuring responsible waste management, cleanliness, and CBSE-compliant menstrual hygiene management.",
+      "School-ready sanitary napkin disposal machine with safe, hygienic, and eco-friendly incineration—ensuring responsible waste management and full MHM compliance under CBSE guidelines.",
     benefits: [
       "200+ pads / day capacity",
       "Smokeless operation",
@@ -41,7 +41,7 @@ export const products: MhmProduct[] = [
     image: "/images/MHM_corner.jpeg",
     title: "MHM Corner",
     description:
-      "Girls’ washroom MHM zone with sanitary napkin vending, safe incinerator disposal, and hygiene facilities—ensuring privacy, dignity, and CBSE-compliant menstrual hygiene management.",
+      "Dedicated MHM corner in girls' washroom with sanitary napkin vending, safe incinerator disposal, and hygiene facilities—a complete MHM compliance solution ensuring privacy, dignity, and CBSE adherence.",
     benefits: [
       "Sanitary napkin vending for easy access",
       "Safe disposal with incinerator system",
