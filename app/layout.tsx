@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoJsonLd from "@/components/SeoJsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -100,6 +101,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
         <SeoJsonLd />
       </body>
     </html>
