@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/gallery", label: "Gallery" },
   { href: "/pricing", label: "Pricing" },
   { href: "/school-mhm-compliance-solutions", label: "MHM Compliance" },
-  { href: "/contact", label: "Contact" },
+  { href: "https://mkp.gem.gov.in/sanitary-pad-production-machine/sanitary-pad-production-machine/p-5116877-42894667343-cat.html", label: "GeM Seller", external: true, logo: "/images/GeM logo.png" },
 ] as const;
 
 export default function Navbar() {
@@ -56,23 +56,57 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isMhmCompliance =
               link.href === "/school-mhm-compliance-solutions";
-            const isActive = pathname === link.href;
+            const isExternal = "external" in link && link.external;
+            const isActive = !isExternal && pathname === link.href;
+            const logo = "logo" in link ? link.logo : undefined;
+            const isGeMSeller = link.label === "GeM Seller";
+
+            const className = `relative text-sm font-medium transition-all duration-300 ${
+              isGeMSeller
+                ? "inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-primary text-primary bg-primary/5 animate-pulse-glow hover:bg-primary hover:text-white hover:border-primary"
+                : isMhmCompliance
+                ? `px-3.5 py-2 rounded-lg border ${
+                    isActive
+                      ? "text-primary bg-primary/10 border-primary/40"
+                      : "text-navy border-primary/20 hover:text-primary hover:bg-primary/5"
+                  }`
+                : `px-3 py-2 rounded-lg hover:text-primary ${
+                    isActive ? "text-primary" : "text-navy"
+                  }`
+            }`;
+
+            if (isExternal) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {logo ? (
+                    <span className="inline-flex items-center gap-1.5">
+                      <Image
+                        src={logo}
+                        alt="GeM logo"
+                        width={16}
+                        height={16}
+                        className="h-4 w-auto object-contain"
+                      />
+                      <span>{link.label}</span>
+                    </span>
+                  ) : (
+                    link.label
+                  )}
+                </a>
+              );
+            }
 
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-all duration-300 ${
-                  isMhmCompliance
-                    ? `px-3.5 py-2 rounded-lg border ${
-                        isActive
-                          ? "text-primary bg-primary/10 border-primary/40"
-                          : "text-navy border-primary/20 hover:text-primary hover:bg-primary/5"
-                      }`
-                    : `px-3 py-2 rounded-lg hover:text-primary ${
-                        isActive ? "text-primary" : "text-navy"
-                      }`
-                }`}
+                className={className}
               >
                 {link.label}
                 {isActive && !isMhmCompliance && (
@@ -105,25 +139,59 @@ export default function Navbar() {
           {navLinks.map((link) => {
             const isMhmCompliance =
               link.href === "/school-mhm-compliance-solutions";
-            const isActive = pathname === link.href;
+            const isExternal = "external" in link && link.external;
+            const isActive = !isExternal && pathname === link.href;
+            const logo = "logo" in link ? link.logo : undefined;
+            const isGeMSeller = link.label === "GeM Seller";
+
+            const className = `block px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+              isGeMSeller
+                ? "border border-primary text-primary bg-primary/5 animate-pulse-glow hover:bg-primary hover:text-white hover:border-primary"
+                : isMhmCompliance
+                ? `${
+                    isActive
+                      ? "text-primary bg-primary/10 border-primary/40"
+                      : "text-navy border-primary/25 hover:text-primary hover:bg-primary/5"
+                  } rounded-lg border`
+                : `rounded-lg ${
+                    isActive
+                      ? "text-primary bg-primary/5"
+                      : "text-navy hover:text-primary hover:bg-gray-50"
+                  }`
+            }`;
+
+            if (isExternal) {
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {logo ? (
+                    <span className="inline-flex items-center gap-1.5">
+                      <Image
+                        src={logo}
+                        alt="GeM logo"
+                        width={16}
+                        height={16}
+                        className="h-4 w-auto object-contain"
+                      />
+                      <span>{link.label}</span>
+                    </span>
+                  ) : (
+                    link.label
+                  )}
+                </a>
+              );
+            }
 
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
-                  isMhmCompliance
-                    ? `${
-                        isActive
-                          ? "text-primary bg-primary/10 border-primary/40"
-                          : "text-navy border-primary/25 hover:text-primary hover:bg-primary/5"
-                      } rounded-lg border`
-                    : `rounded-lg ${
-                        isActive
-                          ? "text-primary bg-primary/5"
-                          : "text-navy hover:text-primary hover:bg-gray-50"
-                      }`
-                }`}
+                className={className}
               >
                 {link.label}
               </Link>

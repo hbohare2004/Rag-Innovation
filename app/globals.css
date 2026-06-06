@@ -121,3 +121,8 @@
     transform: scale(1.03);
   }
 }
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
