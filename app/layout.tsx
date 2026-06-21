@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SeoJsonLd from "@/components/SeoJsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const poppins = Poppins({
@@ -98,6 +99,7 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
+        <MicrosoftClarity />
         <Navbar />
         <main>{children}</main>
         <Footer />
