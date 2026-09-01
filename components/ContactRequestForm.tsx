@@ -3,10 +3,17 @@
 import { useState } from "react";
 
 export default function ContactRequestForm() {
-  const [status, setStatus] = useState<"idle" | "opening" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  function buildMessage(formData: FormData) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    setErrorMsg(null);
+
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
+
     const name = (formData.get("name") ?? "").toString().trim();
     const email = (formData.get("email") ?? "").toString().trim();
     const phone = (formData.get("phone") ?? "").toString().trim();
@@ -14,65 +21,25 @@ export default function ContactRequestForm() {
     const interest = (formData.get("interest") ?? "").toString().trim();
     const message = (formData.get("message") ?? "").toString().trim();
 
-    const bodyLines = [
-      " *New Enquiry from Rag Innovations Website*",
-      "",
-      ` Name: ${name || "-"}`,
-      ` Email: ${email || "-"}`,
-      ` Phone: ${phone || "-"}`,
-      ` Organisation: ${org || "-"}`,
-      ` Interested in: ${interest || "-"}`,
-      "",
-      " Message:",
-      message || "-",
-      "",
-      "────────────────────",
-      "Sent via Rag Innovations Contact Form",
-    ];
-
-    const subject = `New Enquiry${name ? ` - ${name}` : ""}`;
-
-    return {
-      subject,
-      body: bodyLines.join("\n"),
-      whatsappText: bodyLines.join("\n"), // WhatsApp looks better with line breaks
-    };
-  }
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("opening");
-    setErrorMsg(null);
-
-    const formData = new FormData(e.currentTarget);
-    const { subject, body, whatsappText } = buildMessage(formData);
-
-    const mailtoUrl = `mailto:raginnovations@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    const whatsappUrl = `https://wa.me/9425128596?text=${encodeURIComponent(whatsappText)}`;
-
     try {
-      // Open WhatsApp first (better UX as it's mobile-friendly)
-      const waWindow = window.open(whatsappUrl, "_blank");
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, phone, org, interest, message }),
+      });
 
-      // Small delay so both don't get blocked
-      setTimeout(() => {
-        const mailWindow = window.open(mailtoUrl, "_blank");
+      const data = await res.json();
 
-        if (!waWindow && !mailWindow) {
-          setStatus("error");
-          setErrorMsg("Popup blocked by browser. Please allow popups for this site.");
-          return;
-        }
-
-        // Success
+      if (res.ok && data.success) {
         setStatus("success");
-        e.currentTarget.reset();
-
-        // Auto reset status after 4 seconds
-        setTimeout(() => setStatus("idle"), 4000);
-      }, 300);
-    } catch (err) {
+        formElement.reset();
+      } else {
+        setStatus("error");
+        setErrorMsg(data.error || "Something went wrong. Please try again.");
+      }
+    } catch {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again.");
     }
@@ -171,16 +138,16 @@ export default function ContactRequestForm() {
 
       <button
         type="submit"
-        disabled={status === "opening"}
+        disabled={status === "sending"}
         className="btn-cta bg-primary w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
       >
-        {status === "opening" ? "Opening Email & WhatsApp..." : "Send Message →"}
+        {status === "sending" ? "Sending..." : "Send Message →"}
       </button>
 
       {/* Status Messages */}
       {status === "success" && (
         <p className="text-sm text-green-600 font-medium">
-          ✅ Message ready! Check your email client and WhatsApp.
+          ✅ Thank you! Your enquiry has been submitted successfully.
         </p>
       )}
 
@@ -189,4 +156,4 @@ export default function ContactRequestForm() {
       )}
     </form>
   );
-}
+}
