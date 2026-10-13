@@ -7,6 +7,7 @@ import SeoJsonLd from "@/components/SeoJsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import MicrosoftClarity from "@/components/MicrosoftClarity";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -105,6 +106,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <SeoJsonLd />
+        <Analytics />
       </body>
     </html>
   );
